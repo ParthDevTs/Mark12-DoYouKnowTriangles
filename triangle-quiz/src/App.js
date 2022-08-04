@@ -68,7 +68,7 @@ function App() {
   function calculateHype() {
     let hyp = Math.sqrt(perpendiculer * perpendiculer + base * base);
     hyp = Math.ceil(hyp);
-    setHypotenuse(hyp+:"m");
+    setHypotenuse(hyp + "m");
   }
 
   //area calculation
@@ -84,7 +84,7 @@ function App() {
   }
   function calculateArea() {
     let area = 0.5 * base2 * height;
-    setArea(area + " m^2");
+    setArea(area + "m^2");
   }
   return (
     <div className="App">
