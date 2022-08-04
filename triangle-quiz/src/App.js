@@ -46,7 +46,7 @@ function App() {
     }
 
     setFinalScore("" + totalScore + "/4");
-    if (totalScore > 3) {
+    if (totalScore >= 3) {
       setDisplayMessage("You really Know triangles well!");
     } else {
       setDisplayMessage("Go and Study Triangles :/");
