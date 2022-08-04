@@ -68,7 +68,7 @@ function App() {
   function calculateHype() {
     let hyp = Math.sqrt(perpendiculer * perpendiculer + base * base);
     hyp = Math.ceil(hyp);
-    setHypotenuse(hyp);
+    setHypotenuse(hyp+:"m");
   }
 
   //area calculation
@@ -232,14 +232,16 @@ function App() {
           <h2 className="hyp__heading">Calculate Hypotenuse</h2>
           <div className="main__hyp">
             <div className="hypo__input">
-              <label htmlFor="perpendicular">Length of Perpendicular</label>
+              <label htmlFor="perpendicular">
+                Length of Perpendicular(in m)
+              </label>
               <input
                 onChange={perpendicularHandler}
                 type="number"
                 name="perpendicular"
                 id="perpendicular"
               />
-              <label htmlFor="base">Length of Perpendicular</label>
+              <label htmlFor="base">Length of Perpendicular(in m)</label>
               <input
                 onChange={baseHandler}
                 type="number"
@@ -261,14 +263,14 @@ function App() {
           <h2 className="hyp__heading">Calculate Area of 🛆</h2>
           <div className="main__hyp">
             <div className="hypo__input">
-              <label htmlFor="perpendicular">Length of Height</label>
+              <label htmlFor="perpendicular">Length of Height (in m)</label>
               <input
                 onChange={heightHandler}
                 type="number"
                 name="perpendicular_2"
                 id="perpendicular"
               />
-              <label htmlFor="base">Length of Base</label>
+              <label htmlFor="base">Length of Base (in m)</label>
               <input
                 onChange={base2Handler}
                 type="number"
