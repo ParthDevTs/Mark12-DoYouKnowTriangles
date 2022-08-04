@@ -84,7 +84,7 @@ function App() {
   }
   function calculateArea() {
     let area = 0.5 * base2 * height;
-    setArea(area);
+    setArea(area + " m^2");
   }
   return (
     <div className="App">
