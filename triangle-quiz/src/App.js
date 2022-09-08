@@ -86,6 +86,40 @@ function App() {
     let area = 0.5 * base2 * height;
     setArea(area + "m^2");
   }
+
+  //Triangle check from angles:
+
+  const [angle1, setAngle1] = useState(0);
+  const [angle2, setAngle2] = useState(0);
+  const [angle3, setAngle3] = useState(0);
+  const [angleCheckMessage, setAngleCheckMessage] = useState("");
+
+  function angle1Handler(event) {
+    setAngle1(parseInt(event.target.value));
+  }
+  function angle2Handler(event) {
+    setAngle2(parseInt(event.target.value));
+  }
+  function angle3Handler(event) {
+    setAngle3(parseInt(event.target.value));
+  }
+
+  function checkTriangle() {
+    console.log(angle1, angle2, angle3);
+
+    if (angle1 === 0 || angle2 === 0 || angle3 === 0) {
+      setAngleCheckMessage("Please recheck the angle values");
+    } else {
+      let sumOfAngles = angle1 + angle2 + angle3;
+
+      if (sumOfAngles === 180) {
+        setAngleCheckMessage("It is a Triangle!");
+      } else {
+        setAngleCheckMessage("No, It Doesnt Form a Triangle");
+      }
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -285,6 +319,45 @@ function App() {
             <div className="output__box">
               <h3>The Area of 🛆 is:</h3>
               <div className="output">{area}</div>
+            </div>
+          </div>
+        </div>
+        <div className="calculate__hyp">
+          <h2 className="hyp__heading">Check Sum of Angles</h2>
+          <div className="main__hyp">
+            <div className="hypo__input">
+              <label htmlFor="angle1">1st Angle (in Deg)</label>
+              <input
+                onChange={angle1Handler}
+                type="number"
+                name="angle1"
+                id="angle1 "
+                className="angle"
+              />
+              <label htmlFor="angle2">2nd Angle (in Deg)</label>
+              <input
+                onChange={angle2Handler}
+                type="number"
+                name="baangle2"
+                id="angle2"
+                className="angle"
+              />
+              <label htmlFor="angle3">3rd Angle (in Deg)</label>
+              <input
+                onChange={angle3Handler}
+                type="number"
+                name="angle3"
+                id="angle3"
+                className="angle"
+              />
+
+              <button className="calc__button" onClick={checkTriangle}>
+                Check Result
+              </button>
+            </div>
+            <div className="output__box">
+              <h3>Result:</h3>
+              <div className="output output__angle">{angleCheckMessage}</div>
             </div>
           </div>
         </div>
