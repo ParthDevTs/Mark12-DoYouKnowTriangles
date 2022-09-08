@@ -18,5 +18,14 @@ Users can also find out the hypotenuse of the triangle by inputing base and heig
 <li>Height</li>
 </ol>
 
+<br>
+Users can also find out whether the given angles form a  triangle. Users have to input:
+<ol>
+<li>Angle 1</li>
+<li>Angle 2</li>
+<li>Angle 3</li>
+</ol>
+
+
 
 You can checkout the Live App using this link: https://mark12-trianglequiz-parth.netlify.app/
