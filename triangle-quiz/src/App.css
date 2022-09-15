@@ -3,6 +3,10 @@
   height: 100vh;
 }
 
+button {
+  cursor: pointer;
+}
+
 .main {
   display: flex;
   align-items: center;
@@ -143,7 +147,9 @@
 .output__box {
   display: grid;
   place-content: center;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   width: 100%;
   font-family: monospace;
   font-size: 1rem;
@@ -170,8 +176,7 @@
   position: relative;
   padding: 1rem;
   font-size: 1rem;
-  width: 80%;
-  height: 100%;
+  width: 100%;
 }
 
 #base,

@@ -275,7 +275,7 @@ function App() {
                 name="perpendicular"
                 id="perpendicular"
               />
-              <label htmlFor="base">Length of Perpendicular(in m)</label>
+              <label htmlFor="base">Length of Base(in m)</label>
               <input
                 onChange={baseHandler}
                 type="number"
